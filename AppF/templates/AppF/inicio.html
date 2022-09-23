@@ -1,0 +1,24 @@
+{% extends "AppF/padre.html" %}
+
+
+{% load static %}
+
+{% block titulo %}
+
+Bienvenidos a mi pagina Web
+
+{% endblock %}
+
+{% block descripcion %}
+<p> Se estan buscando los Bancos del tipo: {{busqueda}} </p>
+
+    {% for banco in bancos %}
+
+        <ul>
+            <li>Nombre: {{banco.nombre}}</li>
+            <li>Direccion: {{banco.direccion}}</li>
+            <li>Tipo: {{banco.tipoBco}}</li>
+        </ul>
+    
+    {% endfor %}
+{% endblock %}

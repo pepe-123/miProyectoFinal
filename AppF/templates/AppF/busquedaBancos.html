@@ -1,0 +1,24 @@
+{% extends "AppF/padre.html" %}
+
+
+{% load static %}
+
+{% block titulo %}
+
+En esta sección podrás buscar Bancos por entidad
+
+{% endblock %}
+
+{% block descripcion %}
+    
+    <form action="/AppF/buscar/" method="GET">
+
+        <p>Puede buscar por entidad Publica o Privada</p>
+
+        <input type="text" name="tipo" id="tipo">
+
+        <input type="submit" value="Buscar">
+
+    </form>
+
+{% endblock %}
